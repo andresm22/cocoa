@@ -5,10 +5,10 @@ on:
   # but only for the master branch
   push:
     branches:
-      - main
+      - none
   pull_request:
     branches:
-      - master
+      - none
 jobs:
   SwiftLint:
     runs-on: ubuntu-latest
