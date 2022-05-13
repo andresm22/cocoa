@@ -15,10 +15,10 @@ jobs:
       run: brew install gnupg
     - name: List available Xcode versions
       run: ls /Applications | grep Xcode
-    - name: Decrypt large secret
-      run: ./provisioning/import_provisioning.sh
-      env:
-        PROVISIONING_PASSWORD: ${{ secrets.provisioning_password }}
+    # - name: Decrypt large secret
+    #   run: ./provisioning/import_provisioning.sh
+    #   env:
+    #     PROVISIONING_PASSWORD: ${{ secrets.provisioning_password }}
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_12.app && /usr/bin/xcodebuild -version
     - name: Build archive
